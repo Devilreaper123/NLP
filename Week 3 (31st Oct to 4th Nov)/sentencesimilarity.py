@@ -1,6 +1,5 @@
 import spacy
 import numpy as np
-from spacy import displacy
 
 nlp = spacy.load("en_core_web_md")
 with open("wiki_us.txt", "r") as f:
@@ -22,7 +21,7 @@ doc2 = nlp("Fast food tastes very good.")
 doc3 = nlp("The Empire state building is in New York.")
 doc4 = nlp("I enjoy oranges.")
 doc5 = nlp("I enjoy apples.")
-doc6 = nlp("I enjoy burgers")
+doc6 = nlp("I enjoy burgers.")
 print(doc1, "<->", doc2, "  Similarity :", doc1.similarity(doc2))
 print("\n")
 print(doc2, "<->", doc3, "  Similarity :", doc2.similarity(doc3))
