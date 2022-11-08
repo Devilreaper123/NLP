@@ -10,6 +10,7 @@ class Car(Vehicle):
         self.has_roof = True
 
     def specific_usage(self):
+        self.general_usage()
         print("Specific use : Commute to work, vacation with family")
 
 
@@ -20,13 +21,15 @@ class MotorCycle(Vehicle):
         self.has_roof = False
 
     def specific_usage(self):
+        self.general_usage()
         print("Specific use : Road trip, racing")
 
 
 c = Car()
 c.general_usage()
 c.specific_usage()
-
 m = MotorCycle()
-m.general_usage()
 m.specific_usage()
+m.general_usage()
+print(isinstance(c,MotorCycle))
+print(issubclass(Car,Vehicle))
